@@ -22,6 +22,21 @@
 
 **You write every post.** You signed up for a newsletter platform, after all. AI handles everything between "done writing" and "sent", and tells you afterwards what your readers did.
 
+## Quickstart guide
+
+You need a beehiiv account and Claude (desktop app or Claude Code in terminal, either work). On beehiiv's 14-day Pro trial (no card needed) Claude can build and schedule drafts for you; on the Free plan it prepares everything and you paste it in.
+
+```bash
+git clone <your-copy-of-this-repo> my-newsletter
+cd my-newsletter
+claude
+```
+
+1. Approve the beehiiv server when Claude Code asks, run `/mcp`, choose **beehiiv** and sign in through your browser.
+2. Run **`/start`**.
+
+That's it. The local repo is your AI-enabled workspace from here on: your drafts, your calendar and a folder for every post you send.
+
 ## Start here: `/start`
 
 Everyone runs **`/start`** once. It walks you through configuration of the toolkit for your Beehiiv workspace.
@@ -84,21 +99,6 @@ The content calender lives in [`ops/content-calendar.md`](ops/content-calendar.m
 - **A streak**, tracked against what beehiiv says was sent.
 
 If a draft is late, you're offered to submit what you have or write a short post (about 200 words). AI doesn't replace you by writing a post on your behalf.
-
-## Set up
-
-You need a beehiiv account and Claude Code. On beehiiv's 14-day Pro trial (no card needed) Claude can build and schedule drafts for you; on the Free plan it prepares everything and you paste it in.
-
-```bash
-git clone <your-copy-of-this-repo> my-newsletter
-cd my-newsletter
-claude
-```
-
-1. Approve the beehiiv server when Claude Code asks, run `/mcp`, choose **beehiiv** and sign in through your browser.
-2. Run **`/start`**.
-
-That's it. The repo is your newsletter's workspace from here on: your drafts, your calendar and a folder for every post you send.
 
 ## Later, when you're ready
 
