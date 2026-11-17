@@ -34,11 +34,9 @@ If you're **already publishing**:
 
 If you're starting your **first newsletter:** name it, and write one sentence on what readers get.
 
-Next, you'll be introduced to the three agent roles that support your Beehiiv publishing journey, set up your newsletter look and feel, and choose publication categories so recommendations and sponsors can find you.
-
-Lastly, you'll set your weekly send slot (drafts are due two days before sending), plan your first four weeks of publishing, and end with one next action: usually your first post through `/submit-draft`.
-
-Your logo, style guide or brand colours aren't needed to start. Send them to the Publishing Lead whenever you like and it applies them.
+- Next, you'll be introduced to the three agent roles that support your Beehiiv publishing journey, set up your newsletter look and feel, and choose publication categories so recommendations and sponsors can find you.
+- Lastly, you'll set your weekly send slot (drafts are due two days before sending), plan your first four weeks of publishing, and end with one next action: usually your first post through `/submit-draft`.
+- Your logo, style guide or brand colours aren't needed to start. Send them to the Publishing Lead whenever you like and it applies them.
 
 From then on every post works the same way: **a draft goes into `inbox/` (or the chat), you run `/submit-draft`, and you approve what comes back.**
 
@@ -46,11 +44,11 @@ Nothing else is required to start sending. Signup forms, the welcome email, refe
 
 ## The weekly loop
 
-The same three commands for everyone, every week.
+The same three commands are used every week to keep publishing on track.
 
 ```mermaid
 flowchart LR
-    W(["✍️ You write"]) --> S["/submit-draft<br/><sub>editor edits, builds, checks,<br/>sends a test email</sub>"]
+    W(["✍️ You write"]) --> S["/submit-draft<br/><sub>editor edits, builds, checks,<br/>sends a test</sub>"]
     S --> A{"Your yes?"}
     A -- "edits" --> S
     A -- "schedule" --> P(["📬 Sent"])
@@ -63,7 +61,6 @@ flowchart LR
     class W,A,P you
     class S,R,C cmd
 ```
-
 <sub>Warm boxes are you. Blue boxes are a command you run.</sub>
 
 | When | You | Run | What happens |
@@ -77,7 +74,7 @@ Target: **30 minutes a week or less** on everything that isn't writing.
 
 ## The content calendar
 
-The calendar turns "I should write something" into a date and a due time. It lives in [`ops/content-calendar.md`](ops/content-calendar.md).
+The content calender lives in [`ops/content-calendar.md`](ops/content-calendar.md) and follows these principles:
 
 - **One article a week**, on a fixed send slot, the same day and time every week.
 - **A draft due date** two days before each send, with reminders.
