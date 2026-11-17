@@ -9,7 +9,7 @@
 [![You write every post](https://img.shields.io/badge/AI--written_posts-none-2EA44F?style=flat-square)](#who-does-what)
 [![Last verified](https://img.shields.io/badge/last_verified-Nov_2026-555?style=flat-square)](GUIDE.md)
 
-[**Quick start**](#set-up) · [**How it works**](#the-weekly-loop) · [**Who does what**](#who-does-what) · [**Full guide**](GUIDE.md) · [**Example post**](posts/_example/)
+[**Quick start**](#quickstart-guide) · [**How it works**](#the-weekly-loop) · [**Who does what**](#who-does-what) · [**Full guide**](GUIDE.md) · [**Example post**](posts/_example/)
 
 </div>
 
