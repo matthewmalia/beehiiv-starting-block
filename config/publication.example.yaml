@@ -1,0 +1,66 @@
+# Copy this file to config/publication.yaml. /start does that for you and fills it in.
+# The agents read it at the start of each task. Ids come from beehiiv list tools: never type
+# one by hand.
+
+setup:
+  branch: ""                      # existing (already publishing, here or elsewhere) | first
+  completed_on: ""
+
+publication:
+  publication_id: ""              # pub_<uuid>, from list_publications
+  name: ""
+  writer_name: ""
+  test_email: ""                  # where test emails go; from get_current_user. Must be a workspace
+                                  # member's address unless the workspace allows external test sends
+
+access:                           # how far the beehiiv MCP can write; see "Modes" in CLAUDE.md
+  plan: ""                        # what get_workspace reported (the Pro trial reports "Free")
+  mode: ""                        # full | paste-in, from the write check, not from plan alone
+  can_schedule: unknown           # yes | no | unknown (settled by the first schedule_post)
+  trial: "no"                     # no | likely (Free, but writes work) | yes (writer confirmed)
+  trial_ends_estimate: ""         # workspace created_at + 14 days, or the writer's real date
+  checked_on: ""
+
+promise: ""                       # the one sentence that tells a reader what they'll get
+reader: ""                        # filled in by /capture-voice
+publication_tags: []              # beehiiv categories (set in /start): how recommendations, discovery and sponsors find you. Not shown to readers. Not content tags
+
+schedule:
+  cadence: weekly                 # weekly for the first 30 days
+  send_day: tuesday
+  send_time: "09:00"              # 24-hour, in the time zone below
+  timezone: America/New_York      # IANA name
+  due_offset_days: 2              # the draft is due this many days before the send
+  due_time: "18:00"
+  reminder_days_before_due: [2, 0]   # remind 2 days before the due date, and on the due date
+
+brand:
+  style: ""                       # clean | editorial | bold | custom | existing (their beehiiv look, kept)
+
+editing:
+  default_edit_level: standard    # light | standard | deep
+
+voice:
+  captured: false                 # true once a profile from their posts replaced the starter (/start or /capture-voice)
+  captured_on: ""
+
+migration:                        # only when old posts go out again as first issues
+  note_original: ""               # e.g. "First published on my old blog, March 2025." Empty for none.
+
+nudges:                           # so each later skill is suggested once, not every session
+  capture_voice_suggested: false
+  grow_audience_suggested: false
+
+# Filled in as each item is created -------------------------------------------
+skills:
+  voice_and_format_id: ""         # from save_skill
+  publishing_standards_id: ""
+beehiiv:
+  post_template_id: ""            # post_template_<uuid>
+audience:                         # everything here is set up later by /grow-audience
+  welcome_automation_id: ""       # aut_<uuid>
+  subscribe_form_id: ""
+  popup_form_id: ""
+  signup_survey_id: ""
+  signup_custom_field_id: ""
+  referral_program: false

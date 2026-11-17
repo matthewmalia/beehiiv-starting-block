@@ -1,0 +1,21 @@
+{
+  "publication_id": "pub_<uuid>",
+  "automation": {
+    "name": "Welcome email",
+    "enrolment_type": "limited"
+  },
+  "triggers": [
+    {
+      "event": "signup",
+      "main_conditions": {}
+    }
+  ],
+  "steps": [
+    {
+      "position": 0,
+      "step_type": "send_email",
+      "subject_line": "<your subject line>",
+      "preview_text": "<your preview text>"
+    }
+  ]
+}

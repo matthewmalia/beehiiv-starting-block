@@ -1,0 +1,55 @@
+# Publishing details for one post. The editor fills this in during Stage 2.
+# Field names under email_settings, seo_settings and web_settings match the
+# beehiiv MCP (see learn_post_metadata), so they can be passed to save_post as-is.
+
+mode: full                 # full | paste-in
+edit_level: standard       # light | standard | deep
+slot: "YYYY-MM-DD"         # the calendar slot this post fills
+send_at: "YYYY-MM-DDTHH:MM:SS-05:00"   # ISO 8601 with the publication's UTC offset
+source: new                # new | migrated (moved from another newsletter or blog)
+format: article            # article | short (the late-draft short post)
+
+# --- What the writer chose ---------------------------------------------------
+title: ""                  # the headline
+subtitle: ""
+headline_options:          # the three offered; mark the chosen one in `title`
+  - ""
+  - ""
+  - ""
+
+email_settings:
+  email_subject_line: ""   # the chosen subject line (the A/B control). Locks once sent.
+  email_preview_text: ""   # locks once sent
+subject_alternatives:      # the two A/B alternatives passed to save_split_test
+  - ""
+  - ""
+
+# --- What the editor wrote ---------------------------------------------------
+web_settings:
+  slug: ""
+seo_settings:
+  default_title: ""        # 60 characters or fewer
+  default_description: ""  # about 155 characters or fewer; not a copy of the subtitle
+content_tags: []           # one tag name, not an id: an existing tag, or a new one the writer approved
+
+thumbnail:
+  file: ""                 # path under assets/, or empty
+  alt: ""
+  generated: false         # true only if voice-and-format allows generated thumbnails
+images:
+  - file: ""               # path under assets/
+    alt: ""
+    beehiiv_url: ""        # url returned by save_image (full mode)
+
+recipients: default        # default = free tier on web and email; otherwise describe
+
+# --- beehiiv (full mode) -----------------------------------------------------
+beehiiv:
+  publication_id: ""       # pub_<uuid>
+  post_id: ""              # post_<uuid>
+  post_template_id: ""     # post_template_<uuid>
+  editor_url: ""
+  split_test: false
+  test_email_sent_at: ""
+  scheduled_at: ""         # filled in by the Lead after the writer's yes
+  sent_at: ""              # filled in from beehiiv after sending

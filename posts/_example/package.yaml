@@ -1,0 +1,51 @@
+# Sample only. Every id, URL and time here is fictional.
+
+mode: full
+edit_level: standard
+slot: "2026-12-01"
+send_at: "2026-12-01T09:00:00-05:00"
+source: new
+format: article
+
+# --- What the writer chose ---------------------------------------------------
+title: "Why small lists win"
+subtitle: "You can do things with 200 readers that nobody can do with 200,000."
+headline_options:
+  - "Why small lists win"          # chosen
+  - "The case for a small list"
+  - "What 200 readers can teach you"
+
+email_settings:
+  email_subject_line: "Your list is too big"
+  email_preview_text: "What you can do with 200 readers that nobody can do with 200,000."
+subject_alternatives:
+  - "Why small lists win"
+  - "200 readers is enough"
+
+# --- What the editor wrote ---------------------------------------------------
+web_settings:
+  slug: "why-small-lists-win"
+seo_settings:
+  default_title: "Why small newsletter lists win"
+  default_description: "A small email list lets you reply to every reader and learn what they want. Here is a simple method for making the most of your first 200 subscribers."
+content_tags:
+  - "Growing a list"
+
+thumbnail:
+  file: "assets/signup-form.png"
+  alt: "Placeholder graphic standing in for a screenshot of a newsletter signup form"
+  generated: false
+images: []
+
+recipients: default
+
+# --- beehiiv (full mode) -----------------------------------------------------
+beehiiv:
+  publication_id: "pub_00000000-0000-0000-0000-000000000000"
+  post_id: "post_00000000-0000-0000-0000-000000000000"
+  post_template_id: "post_template_00000000-0000-0000-0000-000000000000"
+  editor_url: "https://app.beehiiv.com/posts/00000000-0000-0000-0000-000000000000/edit"
+  split_test: true
+  test_email_sent_at: "2026-11-30T10:42:00-05:00"
+  scheduled_at: "2026-12-01T09:00:00-05:00"
+  sent_at: "2026-12-01T09:00:00-05:00"

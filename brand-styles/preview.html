@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starting Block: brand style preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600;700&family=Libre+Franklin:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px 20px 48px; background: #e9eaec; color: #1c1d1f; font-family: Inter, system-ui, sans-serif; }
+  .intro { max-width: 1180px; margin: 0 auto 24px; }
+  .intro h1 { margin: 0 0 6px; font-size: 22px; }
+  .intro p { margin: 0; font-size: 15px; color: #4a4d52; max-width: 70ch; }
+  .grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 960px) { .grid { grid-template-columns: 1fr; max-width: 520px; } }
+  .style { display: flex; flex-direction: column; }
+  .label { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 8px; }
+  .label strong { font-size: 16px; }
+  .label span { font-size: 13px; color: #4a4d52; text-align: right; }
+  .page { flex: 1; padding: 22px 16px; border-radius: 10px; }
+  .mail { padding: 26px 24px 22px; border-radius: 8px; }
+  .mail .title { margin: 0 0 6px; line-height: 1.2; }
+  .mail .sub { margin: 0 0 12px; line-height: 1.4; }
+  .mail .byline { margin: 0 0 14px; font-size: 13px; }
+  .mail hr { border: 0; margin: 16px 0; width: 50%; margin-left: 0; }
+  .mail h2 { margin: 18px 0 4px; line-height: 1.3; }
+  .mail p { margin: 10px 0; line-height: 1.55; }
+  .mail a { text-decoration: underline; }
+  .mail blockquote { margin: 14px 0; padding: 14px 16px; border-left-style: solid; border-left-width: 3px; line-height: 1.5; }
+  .mail .btn { display: inline-block; margin-top: 8px; padding: 11px 20px; text-decoration: none; font-size: 15px; }
+  .mail .foot { margin-top: 18px; font-size: 12px; }
+  .swatches { display: flex; gap: 6px; margin: 10px 2px 0; }
+  .swatches i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgba(0,0,0,.18); }
+  .note { max-width: 1180px; margin: 24px auto 0; font-size: 13px; color: #4a4d52; }
+
+  /* Clean */
+  .clean .page { background: #FFFFFF; border: 1px solid #d9dbdf; }
+  .clean .mail { background: #FFFFFF; font-family: Inter, sans-serif; color: #374151; font-size: 16px; padding-left: 8px; padding-right: 8px; }
+  .clean .title { font-size: 26px; font-weight: 700; color: #111827; }
+  .clean .sub { font-size: 17px; color: #4B5563; }
+  .clean .byline { color: #111827; }
+  .clean hr { height: 2px; background: #2563EB; }
+  .clean h2 { font-size: 21px; font-weight: 700; color: #111827; }
+  .clean a { color: #2563EB; }
+  .clean blockquote { background: #F3F4F6; border-left-color: #2563EB; color: #111827; border-radius: 6px; }
+  .clean .btn { background: #2563EB; color: #FFFFFF; border-radius: 8px; font-weight: 600; }
+  .clean .foot { color: #6B7280; }
+
+  /* Editorial */
+  .editorial .page { background: #F4EFE6; }
+  .editorial .mail { background: #FFFDF8; font-family: Lora, Georgia, serif; color: #2B2620; font-size: 17px; }
+  .editorial .title { font-family: "Playfair Display", Georgia, serif; font-size: 28px; font-weight: 700; color: #1F1B16; }
+  .editorial .sub { font-size: 17px; color: #5C5346; }
+  .editorial .byline { font-family: "Libre Franklin", sans-serif; color: #1F1B16; }
+  .editorial hr { height: 1px; background: #9B2C2C; }
+  .editorial h2 { font-family: "Playfair Display", Georgia, serif; font-size: 22px; font-weight: 700; color: #1F1B16; }
+  .editorial a { color: #9B2C2C; }
+  .editorial blockquote { background: #F4EFE6; border-left-color: #9B2C2C; color: #1F1B16; }
+  .editorial .btn { background: #9B2C2C; color: #FFFDF8; border-radius: 2px; font-family: "Libre Franklin", sans-serif; font-weight: 600; }
+  .editorial .foot { font-family: "Libre Franklin", sans-serif; color: #5C5346; }
+
+  /* Bold */
+  .bold .page { background: #0F172A; }
+  .bold .mail { background: #FFFFFF; font-family: "DM Sans", sans-serif; color: #1E293B; font-size: 17px; }
+  .bold .title { font-family: "Space Grotesk", sans-serif; font-size: 30px; font-weight: 700; color: #0F172A; }
+  .bold .sub { font-size: 17px; font-weight: 500; color: #475569; }
+  .bold .byline { color: #0F172A; }
+  .bold hr { height: 4px; background: #F97316; }
+  .bold h2 { font-family: "Space Grotesk", sans-serif; font-size: 24px; font-weight: 700; color: #0F172A; }
+  .bold a { color: #C2410C; }
+  .bold blockquote { background: #FFF7ED; border-left-color: #F97316; color: #0F172A; border-radius: 6px; }
+  .bold .btn { background: #F97316; color: #0F172A; border-radius: 24px; font-family: "Space Grotesk", sans-serif; font-weight: 700; }
+  .bold .foot { color: #475569; }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Pick a brand style</h1>
+  <p>The same sample post in each of the three Starting Block styles. Tell the Publishing Lead which one you want. Your own colour, fonts or style guide can come any time later.</p>
+</div>
+
+<div class="grid">
+
+  <section class="style clean">
+    <div class="label"><strong>1. Clean</strong><span>Inter · white · blue accent</span></div>
+    <div class="page"><div class="mail">
+      <p class="title">Why small lists win</p>
+      <p class="sub">What 200 readers let you do that 200,000 never will.</p>
+      <p class="byline">Sam Rivera · December 1, 2026</p>
+      <hr>
+      <p>When you have 200 readers, you can answer every email. Not with a canned reply. A real one.</p>
+      <h2>The whole method</h2>
+      <p>Start with the form, then share it everywhere. If you don't have one yet, <a href="#">start here</a>.</p>
+      <blockquote>Ask a question and you get 12 answers by lunch.</blockquote>
+      <a class="btn" href="#">Get the template</a>
+      <p class="foot">Sample footer · Unsubscribe · Preferences</p>
+    </div></div>
+    <div class="swatches"><i style="background:#FFFFFF"></i><i style="background:#111827"></i><i style="background:#374151"></i><i style="background:#2563EB"></i></div>
+  </section>
+
+  <section class="style editorial">
+    <div class="label"><strong>2. Editorial</strong><span>Playfair Display + Lora · paper · deep red</span></div>
+    <div class="page"><div class="mail">
+      <p class="title">Why small lists win</p>
+      <p class="sub">What 200 readers let you do that 200,000 never will.</p>
+      <p class="byline">Sam Rivera · December 1, 2026</p>
+      <hr>
+      <p>When you have 200 readers, you can answer every email. Not with a canned reply. A real one.</p>
+      <h2>The whole method</h2>
+      <p>Start with the form, then share it everywhere. If you don't have one yet, <a href="#">start here</a>.</p>
+      <blockquote>Ask a question and you get 12 answers by lunch.</blockquote>
+      <a class="btn" href="#">Get the template</a>
+      <p class="foot">Sample footer · Unsubscribe · Preferences</p>
+    </div></div>
+    <div class="swatches"><i style="background:#F4EFE6"></i><i style="background:#FFFDF8"></i><i style="background:#1F1B16"></i><i style="background:#9B2C2C"></i></div>
+  </section>
+
+  <section class="style bold">
+    <div class="label"><strong>3. Bold</strong><span>Space Grotesk + DM Sans · navy · orange</span></div>
+    <div class="page"><div class="mail">
+      <p class="title">Why small lists win</p>
+      <p class="sub">What 200 readers let you do that 200,000 never will.</p>
+      <p class="byline">Sam Rivera · December 1, 2026</p>
+      <hr>
+      <p>When you have 200 readers, you can answer every email. Not with a canned reply. A real one.</p>
+      <h2>The whole method</h2>
+      <p>Start with the form, then share it everywhere. If you don't have one yet, <a href="#">start here</a>.</p>
+      <blockquote>Ask a question and you get 12 answers by lunch.</blockquote>
+      <a class="btn" href="#">Get the template</a>
+      <p class="foot">Sample footer · Unsubscribe · Preferences</p>
+    </div></div>
+    <div class="swatches"><i style="background:#0F172A"></i><i style="background:#FFFFFF"></i><i style="background:#F97316"></i><i style="background:#C2410C"></i></div>
+  </section>
+
+</div>
+
+<p class="note">This is an approximation for choosing. beehiiv renders the real thing: you will see your style for real in the test email for your first post. Sample text and names are fictional.</p>
+
+</body>
+</html>

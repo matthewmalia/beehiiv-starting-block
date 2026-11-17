@@ -1,0 +1,52 @@
+<!--
+  Post template body for the "Starting Block" template. /start saves it with
+  save_post_template, then applies the writer's brand style with save_post_template_theme.
+  Remove this comment and every <!- … -> note before saving: beehiiv drops anything it
+  doesn't recognise.
+
+  The starter template is deliberately almost empty. The writer's draft carries its own
+  opening and sign-off, so the first post can go out without any layout decisions.
+
+  Rules:
+  - Keep exactly ONE body placeholder paragraph ([[POST BODY]]). When building a post, the
+    editor replaces that single block with the writer's text using edit_post_content.
+    It is a plain top-level paragraph on purpose: replacing a section means re-sending
+    all of the section's attributes.
+  - All styling goes in data-* attributes. Inline style="…" is dropped. Fonts and colours
+    come from the template's theme (brand-styles/), not from this file.
+  - Every merge tag has a fallback, e.g. {{first_name|there}}.
+-->
+
+<p>[[POST BODY]]</p>
+
+<!--
+  OPTIONAL BLOCKS. Not part of the starter. They are added later, around the placeholder,
+  by the skill named on each.
+
+  Fixed opening (/capture-voice, if the writer wants one), placed before the placeholder:
+    <p>Hi {{first_name|there}},</p>
+
+  Fixed sign-off (/capture-voice), placed after the placeholder:
+    <p>[[SIGN-OFF]]<br>[[NAME]]</p>
+
+  Disclosure line (publishing-standards, if the writer sets one), after the sign-off:
+    <p><em>[[DISCLOSURE LINE]]</em></p>
+
+  Referral card (/grow-audience, needs an active referral program), last:
+    <div class="node-section" data-background-color="#f5f5f5" data-border-color="#e0e0e0" data-border-style="solid" data-border-width-top="1" data-border-width-right="1" data-border-width-bottom="1" data-border-width-left="1" data-border-top-left-radius="8" data-border-top-right-radius="8" data-border-bottom-left-radius="8" data-border-bottom-right-radius="8" data-padding-top="16" data-padding-right="16" data-padding-bottom="16" data-padding-left="16">
+      <p>[[REFERRAL LINE: the writer's one sentence on why to share and what the reward is]]</p>
+      <div class="node-referralProgram"></div>
+    </div>
+
+  Blocks the editor uses inside the body (examples):
+
+  Heading          <h2>Section heading</h2>
+  Divider          <div data-type="horizontalRule"><hr></div>
+  Pull quote       <figure data-type="blockquoteFigure" data-variant="1"><blockquote><p>…</p></blockquote><figcaption data-type="quoteCaption">…</figcaption></figure>
+  Image            <figure data-type="imageBlock" data-src="URL FROM save_image" data-alt="Alt text" data-align="center" data-width="100%"><figcaption>Caption</figcaption></figure>
+  Button           <div class="node-button"><a data-type="button" href="https://example.com" data-alignment="center" data-size="normal">Label</a></div>
+  Link preview     <div class="node-genericEmbed" data-url="https://example.com/article"><h3></h3><p></p><p></p></div>
+  Poll             <div class="node-poll" data-poll-id="poll_<uuid>"></div>
+  Recommendation   <div class="node-recommendation" data-id="<recommendation uuid>"></div>
+  Link             <a class="link" href="https://example.com">words that describe the destination</a>
+-->
