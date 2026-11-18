@@ -3,7 +3,7 @@
 - **Sent:** <day, date, time> · **Measured:** <date> (<n> days after sending)
 - **Content tag:** <tag> · **Length:** <n> words
 - **Subject line:** "<winning subject>" <(A/B: beat "<alt>" by <n> pts | no test)>
-- **Your averages are from:** <n> earlier sends, <date range>
+- **Your averages are from:** <n> earlier sends, <date range> · <same-age snapshots (2–4 days) | current totals, not same-age>
 
 ## The numbers
 

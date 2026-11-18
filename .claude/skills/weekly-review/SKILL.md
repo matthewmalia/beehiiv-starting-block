@@ -17,7 +17,7 @@ This routine reads from beehiiv and writes reports. It never changes a draft, ne
 
 Ask the `analyst` agent for:
 
-1. `performance.md` in the folder of each post sent 2–4 days ago that doesn't have one yet. A post sent less than 2 days ago is too fresh: note it and leave it for next time.
+1. `performance.md` in the folder of each sent post that doesn't have one yet, including any an earlier review missed. A post sent less than 2 days ago is too fresh: note it and leave it for next time. The analyst compares at the same age where it can and labels the comparison when it can't.
 2. This week's report at `ops/reports/<ISO year>-W<week>.md`.
 3. Updates to `ops/learnings.md`.
 4. **First review only**, if beehiiv has sends from before Starting Block: a baseline from the last 5 of them in this week's report, so later posts have averages to compare with. Those posts have no folders; match by title.
