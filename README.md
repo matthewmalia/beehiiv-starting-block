@@ -45,13 +45,13 @@ If you're **already publishing**:
 
 1. Drop **3–5 existing posts** into [`inbox/`](inbox/).
 2. AI drafts your voice profile from your posts for you to approve.
-3. You choose whether those posts are samples or get sent as your first Beehiiv publications.
+3. Choose whether those posts are samples or get scheduled as your first Beehiiv publications.
 
 If you're starting your **first newsletter:** name it, and write one sentence on what readers get.
 
 - Next, you'll be introduced to the three agent roles that support your Beehiiv publishing journey, set up your newsletter look and feel, and choose publication categories so recommendations and sponsors can find you.
 - Lastly, you'll set your weekly send slot (drafts are due two days before sending), plan your first four weeks of publishing, and end with one next action: usually your first post through `/submit-draft`.
-- Your logo, style guide or brand colours aren't needed to start. Send them to the Publishing Lead whenever you like and it applies them.
+- Your logo, style guide or brand colors aren't needed to start. Send them to the Publishing Lead any time in the future, it will take care of setting them for you.
 
 From then on every post works the same way: **a draft goes into `inbox/` (or the chat), you run `/submit-draft`, and you approve what comes back.**
 
